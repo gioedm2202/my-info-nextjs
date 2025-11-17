@@ -1,0 +1,326 @@
+
+        
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Pacifico', cursive;
+    color: #73e2f1;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url('/img/sunset_dark_theme.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+
+header {
+    background-color: rgba(20, 20, 20, 0.85);
+    padding: 15px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-weight: 700;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header nav a:hover {
+    background-color: #5a88c7;
+    color: #fff;
+}
+
+
+.content-section {
+    padding: 120px 20px 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.content-section h1, .content-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.content-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+}
+
+.profile-pic {
+    width: 300px;
+    height: 300px;
+    border-radius: 70%;
+    border: 2px solid #5a88c7;
+    object-fit: scale-down;
+    margin-bottom: 20px;
+    background-color: #eee;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.portfolio-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 20px;
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background-color: #555;
+}
+
+.portfolio-item h3 {
+    margin-bottom: 10px;
+    color: #89c4ff;
+}
+
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 30px auto 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #ccc;
+}
+
+.contact-form button {
+    padding: 15px;
+    background-color: #5a88c7;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #4a72a4;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(20, 20, 20, 0.9);
+    margin-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+#message-box {
+    position: fixed;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 30px;
+    border-radius: 8px;
+    z-index: 200;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: top 0.5s ease-in-out;
+}
+
+#message-box.show {
+    top: 20px;
+}
+
+.api-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+
+.api-widget {
+    background-color: rgba(0,0,0,0.3); 
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    display: flex; 
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.api-widget h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #89c4ff; 
+    margin-bottom: 10px;
+}
+
+.api-widget p {
+    font-size: 1rem;
+    color: #ddd;
+    flex-grow: 1; 
+}
+
+
+.api-btn {
+    padding: 12px 20px;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 15px;
+}
+
+.api-btn:hover {
+    transform: scale(1.05);
+}
+
+
+#fetch-pokemon-btn {
+    background-color: #e63946; 
+}
+#fetch-pokemon-btn:hover {
+    background-color: #d62828;
+}
+
+
+#fetch-rate-btn {
+    background-color: #4CAF50; 
+}
+#fetch-rate-btn:hover {
+    background-color: #45a049;
+}
+
+
+.api-display {
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 20px;
+    backdrop-filter: blur(5px);
+    min-height: 200px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.api-display.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+#pokemon-display-container img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    image-rendering: pixelated; 
+}
+
+#pokemon-display-container h4 {
+    margin-top: 15px;
+    font-size: 1.3rem;
+    color: #ffcb05; 
+    text-transform: capitalize;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    margin-bottom: 0;
+}
+
+
+#rate-display-container .rate-text {
+    font-size: 2rem; 
+    font-weight: 700;
+    color: #50c878; 
+    margin: 5px 0;
+}
+#rate-display-container .rate-base {
+    font-size: 1rem;
+    color: #fff;
+    margin: 0;
+}
+#rate-display-container .rate-time {
+    font-size: 0.8rem;
+    color: #ccc;
+    margin-top: 15px;
+}
+
+
+.api-display.loading h4 {
+    color: #fff;
+    font-size: 1.2rem;
+    text-shadow: none;
+}
+.api-display.loading img {
+    display: none; 
+}
